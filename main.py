@@ -2,8 +2,6 @@ import os
 import random
 
 class PassGenerator(object):
-    """docstring for ."""
-
     def __init__(self):
         self.password = ""
         self.listK = []
@@ -31,9 +29,6 @@ class PassGenerator(object):
         minSpecialChar = int(len(psw) * 0.2)
         minNumber = int(len(psw) * 0.2)
         minCapsChar = int(len(psw) * 0.1)
-        if len(psw) < 10:
-            print("Minimun of 10 Characteres")
-            return "Fraco"
 
         if int(self.specialChar) >= minSpecialChar and int(self.number) >= minNumber and int(self.capsChar) >= minCapsChar:
             return "Forte"
@@ -73,7 +68,6 @@ class PassGenerator(object):
             PassGenerator()
         else:
             return self.password
-
 
     def putString(self, listChar):
         k = random.choice([x for x in range(0, len(self.password))])
